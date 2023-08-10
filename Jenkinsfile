@@ -7,7 +7,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Checkout the repository from your Git repository URL using the 'main' branch
-                git branch: 'main', url: 'https://github.com/aditiiip/DevopsFinal.git'
+                git branch: 'master', url: 'https://github.com/aditiiip/DevopsFinal.git'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
         stage('Push Docker Image to Docker Hub') {
             environment {
                 // Define your Docker Hub username and repository name
-                DOCKER_HUB_USERNAME = 'Aditi8p'
+                DOCKER_HUB_USERNAME = 'aditi8p'
                 DOCKER_HUB_REPOSITORY = 'my_web_app_image'
                 // Define your Docker Hub password
                 DOCKER_HUB_PASSWORD = 'Aditi@1822'
